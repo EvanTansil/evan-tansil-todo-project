@@ -4,9 +4,8 @@ import { compose, withState, withHandlers } from 'recompose';
 export default compose(
     withState('value', 'setValue', props =>{
         console.log('got props', props);
-    return props.value||
-    } )
-withHandllers({
+    return props.value ||  '' } ),
+withHandlers({
     handleKeyUp:( {addNew, setValue }) => e =>{
      const text = e.target.value.trim();   
 
@@ -14,7 +13,7 @@ withHandllers({
      addNew(text);    
     setValue('');
     }
-    }
+    },
 handleChange :({setValue}) => e =>{
     setValue(e.target.value);
 } 

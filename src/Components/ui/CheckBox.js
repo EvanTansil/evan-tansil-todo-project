@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import react from 'react';
 import React, {Component} from 'react';
 
-class CheckBox extendsComponent{
+class CheckBox extends Component{
     constructor(props){
         super(props);
     this.state={
