@@ -2,7 +2,7 @@ import React from 'react';
 import CheckBox from './CheckBox';
 
 export default function TodoItem(props){
-const {data, changeStatus} = Props;
+const {data, changeStatus} = props;
 const handleChange= (checked) => changeStatus(data.id, checked);
 const newItem = 'todo-item ui-state-default ' + (data.completed === true ? 'completed' : 'pending');
 return (
